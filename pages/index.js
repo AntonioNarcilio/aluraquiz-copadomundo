@@ -9,10 +9,10 @@ import QuizLogo from '../src/components/QuizLogo'
 export const QuizContainer = styled.div`
   width: 100%;
   max-width: 350px;
-  padding-top: 45px;
+  padding-top: 70px;
   margin: auto 10%;
   @media screen and (max-width: 500px) {
-    margin: auto;
+    margin: 10% auto;
     padding: 15px;
   }
 `;
@@ -24,7 +24,7 @@ export default function Home() {
       backgroundImage={db.bg} 
       backgroundImageMobile={db.bg_mobile}>
       <QuizContainer>
-
+      <QuizLogo />
         <Widget>
           <Widget.Header>
             <h1>{db.title}</h1>
@@ -39,7 +39,7 @@ export default function Home() {
             <h1>Quiz</h1>
           </Widget.Header>
           <Widget.Content>
-            <p>Testando ..</p>
+            <p>Em breve ...</p>
           </Widget.Content>
         </Widget>
 

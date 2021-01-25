@@ -31,7 +31,7 @@ const QuizBackground = styled.div`
     
     *:first-child {
       position: relative;
-      z-index: 0;
+      z-index: 10;
     }
   }
 `;
