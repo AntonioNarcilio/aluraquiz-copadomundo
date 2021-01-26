@@ -1,7 +1,7 @@
 {
   "bg": "https://images.unsplash.com/photo-1590669233095-90608d89c79c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1490&q=80",
   "bg_mobile": "https://images.unsplash.com/photo-1546608235-3310a2494cdf?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1491&q=80",
-  "cover_site": "./src/images/cover.png",
+  "cover_site": "src/images/cover.png",
   "title": "Quiz sobre as Copas do Mundo 🏆",
   "description": "Teste os seus conhecimentos 🤔 referente aos acontecimentos que ocorrem durante as Copas do Mundo ⚽",
   "questions": [
