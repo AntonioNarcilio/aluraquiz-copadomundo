@@ -14,12 +14,12 @@ function HeadPage() {
 			<meta property="og:title" content={db.title} key="ogtitle" />
 			<meta property="og:description" content={db.description} key="ogdesc" />
 
-			<meta property="og:image" content="../../../public/static/cover.jpg" key="ogimage" />
+			<meta property="og:type" content="website" />
+			<meta property="og:url"  content="https://aluraquiz-copadomundo.antonionarcilio.vercel.app" />
+			<meta property="og:image" content={db.preview_site} key="ogimage" />
 			<meta property="og:image:type" content="image/jpeg" />
 			<meta property="og:image:width" content="800" /> 
 			<meta property="og:image:height" content="600" />
-
-			<meta property="og:type" content="website"></meta>
 		</Head>
   )
 }
