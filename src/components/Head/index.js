@@ -14,7 +14,7 @@ function HeadPage() {
 			<meta property="og:description" content={db.description} />
 
 			<meta property="og:image" content={db.cover_site} />
-			<meta property="og:image:type" content="image/jpeg" />
+			<meta property="og:image:type" content="image/jpg" />
 			<meta property="og:image:width" content="800" /> 
 			<meta property="og:image:height" content="600" />
 
