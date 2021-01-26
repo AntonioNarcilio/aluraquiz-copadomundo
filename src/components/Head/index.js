@@ -5,7 +5,7 @@ function HeadPage() {
   return (
 		<Head>
 			<title>{db.title}</title>
-			<link rel="icon" href="../../images/favicon.png" sizes="16x16" type="image/png"></link>
+			<link rel="icon" href={db.favicon} sizes="32x32" type="image/png"></link>
 
 			<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 			<meta property="og:locale" content="pt_BR" />
