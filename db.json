@@ -1,10 +1,11 @@
 {
   "bg": "https://i.imgur.com/PWCH8U0.jpg",
   "bg_mobile": "https://images.unsplash.com/photo-1546608235-3310a2494cdf?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1491&q=80",
-  "preview_site": "https://i.imgur.com/XILMqat.jpg",
-  "favicon": "static/favicon.ico",
   "title": "Quiz sobre as Copas do Mundo 🏆",
   "description": "Teste os seus conhecimentos 🤔 referente aos acontecimentos que ocorrem durante as Copas do Mundo ⚽",
+  "favicon": "static/favicon.ico",
+  "preview_site": "https://i.imgur.com/KnWAKSP.jpg",
+  "url_site": "https://aluraquiz-copadomundo.antonionarcilio.vercel.app",
   "questions": [
     {
       "image": "",

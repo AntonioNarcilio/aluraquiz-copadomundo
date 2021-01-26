@@ -1,5 +1,5 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import styled from 'styled-components';
-
 import React from 'react';
 import PropTypes from 'prop-types';
 
