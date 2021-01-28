@@ -136,7 +136,7 @@ export default function QuizPage() {
     // fetch() ...
     setTimeout(() => {
       setScreenState(screenStates.QUIZ);
-    }, 1 * 5000);
+    }, 1 * 6000);
   // nasce === didMount
   }, []);
 
