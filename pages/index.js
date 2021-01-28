@@ -8,7 +8,8 @@ import Widget from '../src/components/Widget';
 import Footer from '../src/components/Footer';
 import QuizBackground from '../src/components/QuizBackground';
 import QuizLogo from '../src/components/QuizLogo';
-import Form from '../src/components/Form';
+import Input from '../src/components/Input';
+import Button from '../src/components/Button';
 import db from '../db.json';
 
 export default function Home() {
@@ -32,29 +33,30 @@ export default function Home() {
             </Widget.Header>
             <Widget.Content>
               <p>{db.description}</p>
-              <Form onSubmit={(e) => {
+              <form onSubmit={(e) => {
                 e.preventDefault();
                 ROUTER.push(`/quiz?name=${name}`);
               }}
               >
-                <input
+                <Input
+                  name="NomeDoUsuario"
                   onChange={(infosDoEvento) => {
                     setName(infosDoEvento.target.value);
                   }}
                   placeholder="Digite o seu nome para começar a jogar 🕹"
+                  value={name}
                 />
 
-                <button type="submit" disabled={name.length === 0}>
-                  JOGAR&ensp;
-                  {name}
-                </button>
-              </Form>
+                <Button type="submit" disabled={name.length === 0}>
+                  {`JOGAR ${name}`}
+                </Button>
+              </form>
             </Widget.Content>
           </Widget>
 
           <Widget>
             <Widget.Header>
-              <h1>Quiz</h1>
+              <h1>Quiz da Galera</h1>
             </Widget.Header>
             <Widget.Content>
               <p>Em breve ...</p>

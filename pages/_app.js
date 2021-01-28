@@ -6,10 +6,26 @@ import Head from 'next/head';
 import db from '../db.json';
 
 const GlobalStyle = createGlobalStyle`
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+/* ::-webkit-scrollbar-button {
+    background: #ccc
+} */
+/* ::-webkit-scrollbar-track-piece {
+    background: #736F66;
+}
+
+::-webkit-scrollbar-thumb {
+    background: ${({ theme }) => theme.colors.secondary};
+}​ */
+
 /* Reset css */
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -20,14 +36,18 @@ body {
   // Deixa branco no começo
   color: ${({ theme }) => theme.colors.contrastText};
 }
+
 html, body {
   min-height: 100vh;
 }
+
+
 #__next {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
+
 `;
 
 const THEME = db.theme_world_cup;

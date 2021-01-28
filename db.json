@@ -8,10 +8,10 @@
   "bg_mobile": "https://images.unsplash.com/photo-1546608235-3310a2494cdf?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1491&q=80",
   "questions": [
     {
-      "image": "",
-      "title": "",
-      "description": "",
-      "answer": 2,
+      "image": "static/background.jpg",
+      "title": "Pergunta 1",
+      "description": "Descrição ...",
+      "answer": 3,
       "alternatives": [
         "Alternativa 1",
         "Alternativa 2",
@@ -20,9 +20,9 @@
       ]
     },
     {
-      "image": "",
-      "title": "",
-      "description": "",
+      "image": "static/background.jpg",
+      "title": "Pergunta 2",
+      "description": "Descrição ...",
       "answer": 2,
       "alternatives": [
         "Alternativa 1",
@@ -61,7 +61,7 @@
     "colors": {
       "primary": "#116300",
       "secondary": "#FEC310",
-      "placeholder": "#7b7b7b",
+      "disabled": "#7b7b7b",
       "mainBg": "#062301",
       "contrastText": "#FFFFFF",
       "wrong": "#FF5722",
