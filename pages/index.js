@@ -43,7 +43,7 @@ export default function Home() {
                   onChange={(infosDoEvento) => {
                     setName(infosDoEvento.target.value);
                   }}
-                  placeholder="Digite o seu nome para começar a jogar 🕹"
+                  placeholder="Diga o seu nome para começar a jogar !"
                   value={name}
                 />
 
@@ -59,12 +59,15 @@ export default function Home() {
               <h1>Quiz da Galera</h1>
             </Widget.Header>
             <Widget.Content>
-              <p>Em breve ...</p>
+
+            <Widget.Topic>
+              Em breve..
+            </Widget.Topic>
+            
             </Widget.Content>
           </Widget>
 
           <Footer />
-
         </QuizContainer>
 
         <GitHubCorner projectUrl={db.others.github} />
