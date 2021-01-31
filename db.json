@@ -30,14 +30,35 @@
       ]
     },
     {
-      "image": "/static/meme-crying-cat-2-1.jpg",
-      "title": "Em breve mais....",
-      "description": "",
+      "image": "https://github.com/AntonioNarcilio/aluraquiz-copadomundo/raw/main/public/static/gol.jpg?raw=true",
+      "title": "Copa do Mundo - Recordes",
+      "description": "Quais desses jogadores foi o mais novo a marcar um gol em uma final de copa do mundo?",
+      "answer": 1,
+      "alternatives": [
+        "Ronaldo \"Fenômeno\"",
+        "Pelé",
+        "Mbappé"
+      ]
+    },
+    {
+      "image": "https://github.com/AntonioNarcilio/aluraquiz-copadomundo/raw/main/public/static/copadomundo-2018.gif?raw=true",
+      "title": "Copa do Mundo 2018",
+      "description": "Quem foi o autor do gol considerado o mais bonito da Copa do Mundo da França de 2018?",
       "answer": 0,
       "alternatives": [
-        "Alternativa 1",
-        "Alternativa 2",
-        "Alternativa 3"
+        "Pavard",
+        "Lucas Hernández",
+        "Mbappé"
+      ]
+    },{
+      "image": "https://github.com/AntonioNarcilio/aluraquiz-copadomundo/raw/main/public/static/campeao.jpg?raw=true",
+      "title": "Copa do Mundo - Marcos da Historia",
+      "description": "Qual foi a primeira seleção a ser campeã da Copa do Mundo?",
+      "answer": 2,
+      "alternatives": [
+        "Argentina  🇦🇷",
+        "Alemanha  🇩🇪",
+        "Uruguai  🇺🇾"
       ]
     }
   ],
