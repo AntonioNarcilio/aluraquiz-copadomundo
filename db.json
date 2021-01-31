@@ -11,9 +11,8 @@
       "image": "https://github.com/AntonioNarcilio/aluraquiz-copadomundo/raw/main/public/static/la_mano_de_dios.webp?raw=true",
       "title": "Copa do Mundo de 1986",
       "description": "Contra qual seleção, Diego Maradona fez o emblemático gol conhecido como \"La Mano de Dios\" 🖐🏻.",
-      "answer": 2,
+      "answer": 1,
       "alternatives": [
-        "Holanda  🇳🇱",
         "Italia  🇮🇹",
         "Inglaterra  🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "Uruguai  🇺🇾"
@@ -27,7 +26,6 @@
       "alternatives": [
         "Quartas de finais",
         "Semi finais",
-        "Fase de Grupos",
         "Oitavas de final"
       ]
     },
@@ -39,8 +37,7 @@
       "alternatives": [
         "Alternativa 1",
         "Alternativa 2",
-        "Alternativa 3",
-        "Alternativa 4"
+        "Alternativa 3"
       ]
     }
   ],
@@ -55,8 +52,8 @@
       "disabled": "#7b7b7b",
       "mainBg": "#062301",
       "contrastText": "#FFFFFF",
-      "wrong": "#FF5722",
-      "success": "#4CAF50"
+      "wrong": "#F44336",
+      "success": "#8BC34A"
     },
     "borderRadius": "4px"
   },
@@ -66,8 +63,8 @@
       "secondary": "#4f00ff",
       "mainBg": "#282A36",
       "contrastText": "#FFFFFF",
-      "wrong": "#ff0000",
-      "success": "#4CAF50"
+      "wrong": "#F44336",
+      "success": "#8BC34A"
     },
     "borderRadius": "4px"
   },
@@ -78,8 +75,8 @@
       "disabled": "#7b7b7b",
       "mainBg": "#062301",
       "contrastText": "#FFFFFF",
-      "wrong": "#FF5722",
-      "success": "#4CAF50"
+      "wrong": "#F44336",
+      "success": "#8BC34A"
     },
     "borderRadius": "4px"
   },

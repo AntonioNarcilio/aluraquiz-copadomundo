@@ -35,7 +35,7 @@ export async function getServerSideProps(context) {
 
         throw new Error('Falha em pegar os dados');
       })
-      .then((respostaConvertidaEmObjeto) => respostaConvertidaEmObjeto)
+      .then((respostaConvertidaEmObjeto) => respostaConvertidaEmObjeto);
       // .catch((err) => {
       //   console.log(err);
       // });

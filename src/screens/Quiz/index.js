@@ -5,24 +5,16 @@ import { motion } from 'framer-motion';
 // import db from '../../../db.json';
 import Widget from '../../components/Widget';
 import QuizLogo from '../../components/QuizLogo';
+import Footer from '../../components/Footer';
 import QuizBackground from '../../components/QuizBackground';
-// import GitHubCorner from '../../components/GitHubCorner';
 import QuizContainer from '../../components/QuizContainer';
 import Button from '../../components/Button';
 import AlternativeForm from '../../components/AlternativeForm';
 import BackLinkArrow from '../../components/BackLinkArrow';
 
 import loadingAnimation from '../../components/Animations/loading.json';
-
-
-const defaultOptions = {
-  loop: true,
-  autoplay: true,
-  animationData: '',
-  rendererSettings: {
-    preserveAspectRatio: 'xMidYMid slice',
-  },
-};
+import correctAnimation from '../../components/Animations/icon_check.json';
+import errorAnimation from '../../components/Animations/icon_error.json';
 
 function ResultWidget({ results }) {
   return (
@@ -202,8 +194,34 @@ function QuestionWidget({
           </Button>
 
           {/* <p>selectedAlternative: {`${selectedAlternative}`}</p> */}
-          {isQuestionSubmited && isCorrect && <p>Você acertou!</p>}
-          {isQuestionSubmited && !isCorrect && <p>Você errou!</p>}
+          { isQuestionSubmited && isCorrect
+          && (
+            <div style={{ marginTop: '24px', marginBottom: '-10px' }}>
+              <Lottie
+                options={{
+                  loop: false,
+                  autoplay: true,
+                  animationData: correctAnimation,
+                }}
+                height={50}
+                width={50}
+              />
+            </div>
+          )}
+          { isQuestionSubmited && !isCorrect
+          && (
+            <div style={{ marginTop: '24px', marginBottom: '-10px' }}>
+              <Lottie
+                options={{
+                  loop: false,
+                  autoplay: true,
+                  animationData: errorAnimation,
+                }}
+                height={50}
+                width={50}
+              />
+            </div>
+          )}
         </AlternativeForm>
       </Widget.Content>
     </Widget>
@@ -239,7 +257,7 @@ export default function QuizPage({ externalQuestions, externalBg }) {
   React.useEffect(() => {
     // fetch() ...
     setTimeout(() => {
-      // setScreenState(screenStates.QUIZ);
+      setScreenState(screenStates.QUIZ);
     }, 6 * 1000);
   // nasce === didMount
   }, []);
@@ -256,7 +274,7 @@ export default function QuizPage({ externalQuestions, externalBg }) {
   return (
     <QuizBackground backgroundImage={bg}>
       <QuizContainer>
-        <QuizLogo />
+        {/* <QuizLogo /> */}
         {screenState === screenStates.QUIZ && (
           <QuestionWidget
             question={question}
@@ -271,7 +289,6 @@ export default function QuizPage({ externalQuestions, externalBg }) {
 
         {screenState === screenStates.RESULT && <ResultWidget results={results} />}
       </QuizContainer>
-
     </QuizBackground>
   );
 }
