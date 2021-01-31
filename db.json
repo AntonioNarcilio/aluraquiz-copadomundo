@@ -4,11 +4,11 @@
   "favicon": "static/favicon.ico",
   "preview_site": "https://i.imgur.com/YMNuE8a.jpg",
   "url_site": "https://aluraquiz-copadomundo.antonionarcilio.vercel.app",
-  "bg": "static/background.jpg",
+  "bg": "https://github.com/AntonioNarcilio/aluraquiz-copadomundo/raw/main/public/static/background.jpg?raw=true",
   "bg_mobile": "https://images.unsplash.com/photo-1546608235-3310a2494cdf?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1491&q=80",
   "questions": [
     {
-      "image": "static/la_mano_de_dios.webp",
+      "image": "https://github.com/AntonioNarcilio/aluraquiz-copadomundo/raw/main/public/static/la_mano_de_dios.webp?raw=true",
       "title": "Copa do Mundo de 1986",
       "description": "Contra qual seleção, Diego Maradona fez o emblemático gol conhecido como \"La Mano de Dios\" 🖐🏻.",
       "answer": 2,
@@ -20,7 +20,7 @@
       ]
     },
     {
-      "image": "static/dibraldinho_gaucho.webp",
+      "image": "https://github.com/AntonioNarcilio/aluraquiz-copadomundo/raw/main/public/static/dibraldinho_gaucho.webp?raw=true",
       "title": "Copa do Mundo de 2002",
       "description": "Em qual fase da competição, a seleção brasileira  🇧🇷 venceu a seleção da Inglaterra 🏴󠁧󠁢󠁥󠁮󠁧󠁿 pelo placar de 2 x 1 com o belíssimo gol de falta do \"Show man\" (Ronaldinho Gaúcho 🧙🏾).",
       "answer": 0,
@@ -45,7 +45,8 @@
     }
   ],
   "external": [
-    ""
+    "https://aluraquiz-base.alura-challenges.vercel.app",
+    "https://aluraquiz-base.alura-challenges.vercel.app"
   ],
   "theme": {
     "colors": {

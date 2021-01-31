@@ -19,6 +19,5 @@ module.exports = {
   ],
   rules: {
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
-    'react/forbid-prop-types': ['enabled', { forbid: ['string'], checkContextTypes: 'boolean', checkChildContextTypes: 'boolean' }],
   },
 };

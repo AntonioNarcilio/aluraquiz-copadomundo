@@ -8,19 +8,18 @@ import db from '../db.json';
 const GlobalStyle = createGlobalStyle`
 
 ::-webkit-scrollbar {
-    width: 0px;
+    width: 3px;
 }
 /* ::-webkit-scrollbar-button {
     background: #ccc
-} */
-/* ::-webkit-scrollbar-track-piece {
-    background: #736F66;
+}  */
+::-webkit-scrollbar-track-piece {
+    background: ${({ theme }) => theme.colors.mainBg};
 }
 
 ::-webkit-scrollbar-thumb {
     background: ${({ theme }) => theme.colors.secondary};
-}​ */
-
+}
 /* Reset css */
 * {
   box-sizing: border-box;
@@ -33,12 +32,12 @@ body {
   display: flex;
   flex-direction: column;
   font-family: 'Lato', sans-serif;
-  // Deixa branco no começo
+  /* Deixa branco no começo */
   color: ${({ theme }) => theme.colors.contrastText};
 }
 
 html, body {
-  min-height: 100vh;
+  min-height: 104vh;
 }
 
 
@@ -50,7 +49,7 @@ html, body {
 
 `;
 
-const THEME = db.theme_world_cup;
+const { theme } = db;
 
 export default function App({ Component, pageProps }) {
   return (
@@ -60,7 +59,7 @@ export default function App({ Component, pageProps }) {
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
       </Head>
 
-      <ThemeProvider theme={THEME}>
+      <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Component {...pageProps} />
       </ThemeProvider>

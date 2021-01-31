@@ -1,83 +1,109 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import db from '../db.json';
-import Widget from '../src/components/Widget';
-import QuizLogo from '../src/components/QuizLogo';
-import QuizBackground from '../src/components/QuizBackground';
-import GitHubCorner from '../src/components/GitHubCorner';
-import QuizContainer from '../src/components/QuizContainer';
-import Button from '../src/components/Button';
-import AlternativeForm from '../src/components/AlternativeForm';
-import animationData  from '../src/components/Loading/animation.json';
 import Lottie from 'react-lottie';
+import { motion } from 'framer-motion';
+// import db from '../../../db.json';
+import Widget from '../../components/Widget';
+import QuizLogo from '../../components/QuizLogo';
+import QuizBackground from '../../components/QuizBackground';
+// import GitHubCorner from '../../components/GitHubCorner';
+import QuizContainer from '../../components/QuizContainer';
+import Button from '../../components/Button';
+import AlternativeForm from '../../components/AlternativeForm';
+import BackLinkArrow from '../../components/BackLinkArrow';
 
+import loadingAnimation from '../../components/Animations/loading.json';
+
+
+const defaultOptions = {
+  loop: true,
+  autoplay: true,
+  animationData: '',
+  rendererSettings: {
+    preserveAspectRatio: 'xMidYMid slice',
+  },
+};
 
 function ResultWidget({ results }) {
   return (
-    <Widget>
+    <Widget
+      as={motion.section}
+      transition={{ delay: 0.5, duration: 0.5 }}
+      variants={{
+        show: { opacity: 1, y: '0' },
+        hidden: { opacity: 0, y: '-100%' },
+      }}
+      initial="hidden"
+      animate="show"
+    >
       <Widget.Header>
         Tela de resultado:
       </Widget.Header>
 
       <Widget.Content>
-        <p>Voce acertou&ensp;
+        <p>
+          Voce acertou&ensp;
           {results.reduce((somatoriaAtual, resultAtual) => {
             const isAcerto = resultAtual === true;
             if (isAcerto) {
               return somatoriaAtual + 1;
             }
             return somatoriaAtual;
-          }, 0)} 
-          {/* Ou de forma mais simplificada ↓↓*/}
+          }, 0)}
+          {/* Ou de forma mais simplificada ↓↓ */}
           {/* {results.filter((x) => x).length} */}
 
-          &ensp;perguntas</p>
+          &ensp;perguntas
+        </p>
         <ul>
           {results.map((result, index) => (
             <li key={`result__${result}`}>
-              #{index + 1}&ensp;Resultado:&ensp;
-              {result === true 
-                ? 'Acertou' 
+              #
+              {index + 1}
+              &ensp;Resultado:&ensp;
+              {result === true
+                ? 'Acertou'
                 : 'Errou'}
-            </li> 
+            </li>
           ))}
 
         </ul>
-       </Widget.Content>
+      </Widget.Content>
     </Widget>
   );
 }
 
 function LoadingWidget() {
-  const [animationState, setAnimationState] = useState({
-    isStopped: false, isPaused: false
-  });
-
-  const defaultOptions = {
-    loop: true,
-    autoplay: true, 
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice'
-    }
-  };
-
   return (
     <>
-    <Widget>
-      <Widget.Header>
-        Aguarde !!!
-      </Widget.Header>
+      <Widget
+        as={motion.section}
+        transition={{ delay: 0, duration: 0.5 }}
+        variants={{
+          show: { opacity: 1, x: '0' },
+          hidden: { opacity: 0, x: '-100%' },
+        }}
+        initial="hidden"
+        animate="show"
+      >
+        <Widget.Header>
+          Aguarde !!!
+        </Widget.Header>
 
-      <Widget.Content>
-          <Lottie 
-            options={defaultOptions}
-            height={100}
-            width={100}
-            isStopped={animationState.isStopped}
-            isPaused={animationState.isPaused}/>
-       </Widget.Content>
-    </Widget>
+        <Widget.Content style={{ display: 'flex', justifyContent: 'center' }}>
+          <div style={{ marginLeft: '-9px', marginBottom: '-9px' }}>
+            <Lottie
+              options={{
+                loop: true,
+                autoplay: true,
+                animationData: loadingAnimation,
+              }}
+              height={100}
+              width={100}
+            />
+          </div>
+        </Widget.Content>
+      </Widget>
     </>
   );
 }
@@ -87,7 +113,7 @@ function QuestionWidget({
   questionIndex,
   totalQuestions,
   onSubmit,
-  addResult
+  addResult,
 }) {
   const [isQuestionSubmited, serIsQuestionSubmited] = useState();
   const [selectedAlternative, setSelectedAlternative] = useState(undefined);
@@ -97,9 +123,18 @@ function QuestionWidget({
   const hasAlternativeSelected = selectedAlternative !== undefined;
 
   return (
-    <Widget>
+    <Widget
+      as={motion.section}
+      transition={{ delay: 0.5, duration: 0.5 }}
+      variants={{
+        show: { opacity: 1, y: '0' },
+        hidden: { opacity: 0, y: '-100%' },
+      }}
+      initial="hidden"
+      animate="show"
+    >
       <Widget.Header>
-        {/* <BackLinkArrow href="/" /> */}
+        <BackLinkArrow href="/" />
         <h3>
           {`Pergunta ${questionIndex + 1} de ${totalQuestions}`}
         </h3>
@@ -135,7 +170,6 @@ function QuestionWidget({
           }}
         >
           {question.alternatives.map((alternative, alternativeIndex) => {
-            
             const alternativeId = `alternative__${alternativeIndex}`;
             const alternativeStatus = isCorrect ? 'SUCCESS' : 'ERROR';
             const isSelected = selectedAlternative === alternativeIndex;
@@ -181,14 +215,15 @@ const screenStates = {
   LOADING: 'LOADING',
   RESULT: 'RESULT',
 };
-export default function QuizPage() {
+export default function QuizPage({ externalQuestions, externalBg }) {
   // React.useState => Defini o estado inicial (aqui começaremos com o estado da tela loading)
   const [screenState, setScreenState] = React.useState(screenStates.LOADING);
   const [results, setResults] = useState([]);
-  const totalQuestions = db.questions.length;
   const [currentQuestion, setCurrentQuestion] = React.useState(0);
   const questionIndex = currentQuestion;
-  const question = db.questions[questionIndex];
+  const question = externalQuestions[questionIndex];
+  const totalQuestions = externalQuestions.length;
+  const bg = externalBg;
 
   function addResult(result) {
     setResults([
@@ -204,7 +239,7 @@ export default function QuizPage() {
   React.useEffect(() => {
     // fetch() ...
     setTimeout(() => {
-      setScreenState(screenStates.QUIZ);
+      // setScreenState(screenStates.QUIZ);
     }, 6 * 1000);
   // nasce === didMount
   }, []);
@@ -219,7 +254,7 @@ export default function QuizPage() {
   }
 
   return (
-    <QuizBackground backgroundImage={db.bg}>
+    <QuizBackground backgroundImage={bg}>
       <QuizContainer>
         <QuizLogo />
         {screenState === screenStates.QUIZ && (
@@ -234,17 +269,29 @@ export default function QuizPage() {
 
         {screenState === screenStates.LOADING && <LoadingWidget />}
 
-        {screenState === screenStates.RESULT && <ResultWidget results={results}/>}
+        {screenState === screenStates.RESULT && <ResultWidget results={results} />}
       </QuizContainer>
 
-      <GitHubCorner projectUrl={db.others.github} />
     </QuizBackground>
   );
 }
 
 QuestionWidget.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
   question: PropTypes.object.isRequired,
   questionIndex: PropTypes.number.isRequired,
   totalQuestions: PropTypes.number.isRequired,
   onSubmit: PropTypes.func.isRequired,
+  addResult: PropTypes.func.isRequired,
+};
+
+ResultWidget.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
+  results: PropTypes.array.isRequired,
+};
+
+QuizPage.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
+  externalQuestions: PropTypes.array.isRequired,
+  externalBg: PropTypes.string.isRequired,
 };
