@@ -38,7 +38,9 @@ body {
 
 html, body {
   min-height: 104vh;
-  background-color: ${({ theme }) => theme.colors.mainBg};
+  background-color:  ${({ theme }) => theme.colors.mainBg} ;
+  background-image: 
+    linear-gradient(transparent 75%, ${({ theme }) => theme.colors.mainBg} 89%);
 }
 
 

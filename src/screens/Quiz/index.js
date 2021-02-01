@@ -4,7 +4,7 @@ import Lottie from 'react-lottie';
 import { motion } from 'framer-motion';
 // import db from '../../../db.json';
 import Widget from '../../components/Widget';
-import QuizLogo from '../../components/QuizLogo';
+// import QuizLogo from '../../components/QuizLogo';
 import Footer from '../../components/Footer';
 import QuizBackground from '../../components/QuizBackground';
 import QuizContainer from '../../components/QuizContainer';
@@ -29,7 +29,10 @@ function ResultWidget({ results }) {
       animate="show"
     >
       <Widget.Header>
-        Tela de resultado:
+        <BackLinkArrow href="/" />
+        <h3>
+          Seu resultado:
+        </h3>
       </Widget.Header>
 
       <Widget.Content>
@@ -45,18 +48,20 @@ function ResultWidget({ results }) {
           {/* Ou de forma mais simplificada ↓↓ */}
           {/* {results.filter((x) => x).length} */}
 
-          &ensp;perguntas
+          {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
+          &ensp;de&ensp;{results.length}&ensp;perguntas !
         </p>
         <ul>
           {results.map((result, index) => (
-            <li key={`result__${result}`}>
-              #
-              {index + 1}
-              &ensp;Resultado:&ensp;
-              {result === true
-                ? 'Acertou'
-                : 'Errou'}
-            </li>
+            <Widget.Topic>
+              <li key={`result__${result}`}>
+                {index + 1}
+                {/* &ensp;Resultado:&ensp; */}
+                {result === true
+                  ? '°  Acertou'
+                  : '°  Errou'}
+              </li>
+            </Widget.Topic>
           ))}
 
         </ul>
@@ -189,11 +194,10 @@ function QuestionWidget({
           {/* <pre>
             {JSON.stringify(question, null, 4)}
           </pre> */}
-          <Button type="submit" disabled={!hasAlternativeSelected}>
+          <Button style={{ marginTop: '0px' }} type="submit" disabled={!hasAlternativeSelected}>
             Confirmar
           </Button>
 
-          {/* <p>selectedAlternative: {`${selectedAlternative}`}</p> */}
           { isQuestionSubmited && isCorrect
           && (
             <div style={{ marginTop: '24px', marginBottom: '-10px' }}>
@@ -288,6 +292,17 @@ export default function QuizPage({ externalQuestions, externalBg }) {
         {screenState === screenStates.LOADING && <LoadingWidget />}
 
         {screenState === screenStates.RESULT && <ResultWidget results={results} />}
+
+        <Footer
+          as={motion.footer}
+          transition={{ delay: 7, duration: 0.5 }}
+          variants={{
+            show: { opacity: 1, x: '0' },
+            hidden: { opacity: 0, x: '-100%' },
+          }}
+          initial="hidden"
+          animate="show"
+        />
       </QuizContainer>
     </QuizBackground>
   );

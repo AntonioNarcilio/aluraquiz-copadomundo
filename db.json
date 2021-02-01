@@ -1,7 +1,7 @@
 {
   "title": "Quiz sobre as Copas do Mundo 🏆",
   "description": "Teste o seu conhecimento 🤔 referente aos acontecimentos que ocorrem durante as Copas do Mundo ⚽",
-  "favicon": "static/favicon.ico",
+  "favicon": "https://github.com/AntonioNarcilio/aluraquiz-copadomundo/raw/main/public/static/favicon.ico",
   "preview_site": "https://i.imgur.com/YMNuE8a.jpg",
   "url_site": "https://aluraquiz-copadomundo.antonionarcilio.vercel.app",
   "bg": "https://github.com/AntonioNarcilio/aluraquiz-copadomundo/raw/main/public/static/background.jpg?raw=true",
@@ -30,9 +30,9 @@
       ]
     },
     {
-      "image": "https://github.com/AntonioNarcilio/aluraquiz-copadomundo/raw/main/public/static/gol.jpg?raw=true",
+      "image": "https://github.com/AntonioNarcilio/aluraquiz-copadomundo/raw/main/public/static/bolanarede.gif",
       "title": "Copa do Mundo - Recordes",
-      "description": "Quais desses jogadores foi o mais novo a marcar um gol em uma final de copa do mundo?",
+      "description": "Quais desses jogadores foi o mais novo 👶🏻 a marcar um gol em uma final de Copa do Mundo?",
       "answer": 1,
       "alternatives": [
         "Ronaldo \"Fenômeno\"",
@@ -43,28 +43,87 @@
     {
       "image": "https://github.com/AntonioNarcilio/aluraquiz-copadomundo/raw/main/public/static/copadomundo-2018.gif?raw=true",
       "title": "Copa do Mundo 2018",
-      "description": "Quem foi o autor do gol considerado o mais bonito da Copa do Mundo da França de 2018?",
+      "description": "Quem foi o autor do gol considerado o mais bonito da Copa do Mundo da França 🇫🇷 de 2018?",
       "answer": 0,
       "alternatives": [
         "Pavard",
         "Lucas Hernández",
         "Mbappé"
       ]
-    },{
+    },
+    {
       "image": "https://github.com/AntonioNarcilio/aluraquiz-copadomundo/raw/main/public/static/campeao.jpg?raw=true",
       "title": "Copa do Mundo - Marcos da Historia",
-      "description": "Qual foi a primeira seleção a ser campeã da Copa do Mundo?",
+      "description": "Qual foi a primeira seleção a ser campeã da Copa do Mundo? 🏆",
       "answer": 2,
       "alternatives": [
         "Argentina  🇦🇷",
         "Alemanha  🇩🇪",
         "Uruguai  🇺🇾"
       ]
+    },
+    {
+      "image": "https://github.com/AntonioNarcilio/aluraquiz-copadomundo/raw/main/public/static/vuvuz.gif",
+      "title": "Copa do Mundo 2010",
+      "description": "Qual o nome do instrumento \"Infernal para uns 😡 / legal para outros 😜\" utilizado pelos torcedores que ficou marcado na Copa do Mundo da Africa do Sul 🇿🇦?",
+      "answer": 1,
+      "alternatives": [
+        "Trompete",
+        "Vuvuzela",
+        "Corneta"
+      ]
+    },
+    {
+      "image": "https://github.com/AntonioNarcilio/aluraquiz-copadomundo/raw/main/public/static/gols.gif",
+      "title": "Copa do Mundo - Recordes",
+      "description": "Quem foi o jogador que mais fez gols 🥅 em uma única edição de Copa do Mundo, conseguindo a façanha de marcar 13 gols?",
+      "answer": 0,
+      "alternatives": [
+        "Just Fontaine  🇫🇷",
+        "Pelé  🇧🇷",
+        "Miroslav Klose  🇩🇪"
+      ]
+    },
+    {
+      "image": "https://github.com/AntonioNarcilio/aluraquiz-copadomundo/raw/main/public/static/campeao.jpg?raw=true",
+      "title": "Copa do Mundo - Marcos da Historia",
+      "description": "Quais dessa seleções nunca conquistou uma Copa do Mundo?",
+      "answer": 2,
+      "alternatives": [
+        "Espanha  🇪🇸",
+        "Inglaterra  🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "Holanda  🇳🇱"
+      ]
+    },
+    {
+      "image": "https://github.com/AntonioNarcilio/aluraquiz-copadomundo/raw/main/public/static/pefrio.gif",
+      "title": "Copa do Mundo - Marcos da Historia",
+      "description": "Qual dessas celebridades se tornou o maior pé frio da historia das Copas do Mundo?",
+      "answer": 1,
+      "alternatives": [
+        "Rubens Barrichello",
+        "Mick Jaeger",
+        "Shakira"
+      ]
+    },
+    {
+      "image": "https://github.com/AntonioNarcilio/aluraquiz-copadomundo/raw/main/public/static/gols.gif",
+      "title": "Copa do Mundo - Recordes",
+      "description": "Quais desses jogadores é o maior artilheiro em todas as Copas do Mundo?",
+      "answer": 2,
+      "alternatives": [
+        "Ronaldo  🇧🇷",
+        "Gerd Müller  🇩🇪",
+        "Miroslav Klose  🇩🇪"
+      ]
     }
   ],
   "external": [
+    "https://naruto-quiz.llofyy.vercel.app",
+    "https://gotquiz-alura.andysteel.vercel.app",
+    "https://aluraquiz-harrypotter.karinarovani.vercel.app",
     "https://aluraquiz-base.alura-challenges.vercel.app",
-    "https://aluraquiz-base.alura-challenges.vercel.app"
+    "https://demon-slayer-quiz.hugos94.vercel.app"
   ],
   "theme": {
     "colors": {

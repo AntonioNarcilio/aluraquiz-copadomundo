@@ -77,7 +77,7 @@ export default function Home() {
             animate="show"
           >
             <Widget.Header>
-              <h1>Quiz da Galera</h1>
+              <h1>Quizzes da Galera</h1>
             </Widget.Header>
             <Widget.Content>
 
@@ -95,7 +95,7 @@ export default function Home() {
                         as={Link}
                         href={`/quiz/${projectName}___${githubUserName}`}
                       >
-                        {`${githubUserName}/${projectName}`}
+                        {`${githubUserName} | ${projectName}`}
                       </Widget.Topic>
                     </li>
                   );
