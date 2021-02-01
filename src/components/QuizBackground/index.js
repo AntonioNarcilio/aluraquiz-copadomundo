@@ -3,8 +3,6 @@ import styled from 'styled-components';
 
 const QuizBackground = styled.div`
   /* background-image: none; */
-    &:after {
-      content: "";
       /* background-image: url(${({ backgroundImageMobile }) => backgroundImageMobile}); */
       background-size: cover;
       background-position: center;
@@ -21,7 +19,7 @@ const QuizBackground = styled.div`
       left: 0;
       right: 0;
       z-index: 0;
-    }
+    
 
   @media screen and (max-width: 500px) {
     background-image: none;
