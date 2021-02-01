@@ -1,6 +1,6 @@
 
-<h3 align="center">
-Projeto desenvolvido durante a Imersão React da <a href="(https://www.alura.com.br">Alura</a>, com o intuito de desenvolver uma aplicação do zero utilizando tecnologias como React, NextJS e Vercel.
+<h3 align="justify">
+Projeto desenvolvido durante a Imersão React da <a href="https://www.alura.com.br">Alura</a>, com o intuito de desenvolver uma aplicação do zero utilizando tecnologias como React, NextJS e Vercel. No qual foi proposto a criação de uma jogo de quizzes referente a um tema / assunto de escolha do desenvolvedor (no meu caso o tema escolhido foi copa do mundo)
 </h3>
 
 ---
@@ -8,15 +8,23 @@ Projeto desenvolvido durante a Imersão React da <a href="(https://www.alura.com
 <br/>
 <p align="center">
 <a href="https://nextjs.org">
- <img alt="nextjs" title="nextjs" src="https://img.shields.io/static/v1?label=next%20js&message=framework%20react&color=fff&labelColor=000000&style=flat&logo=Next.js&logoColor=white" />
+ <img alt="nextjs" title="nextjs" src="https://img.shields.io/static/v1?label=next%20js&message=Framework%20react&style=social&logo=Next.js&logoColor=black" />
 </a>
 
 <a href="https://reactjs.org">
- <img alt="reactjs" title="reactjs" src="https://img.shields.io/static/v1?label=next%20js&message=javascript%20library&color=fff&labelColor=000000&style=flat&logo=React&logoColor=white" />
+ <img alt="reactjs" title="reactjs" src="https://img.shields.io/static/v1?label=React&message=Javascript%20library&style=social&logo=React&logoColor=0088CC" />
 </a>
 
 <a href="https://vercel.com">
- <img alt="vercel" title="vercel" src="https://img.shields.io/static/v1?label=vercel&message=deploy&color=fff&labelColor=000000&style=flat&logo=Vercel&logoColor=white" />
+ <img alt="vercel" title="vercel" src="https://img.shields.io/static/v1?label=vercel&message=Deploy&&style=social&logo=Vercel" />
+</a>
+
+<a href="https://www.figma.com">
+ <img alt="figma" title="figma" src="https://img.shields.io/static/v1?label=Figma&message=Project%20prototyping&style=social&logo=Figma&logoColor=F24E1E" />
+</a>
+
+<a href="https://vercel.com">
+ <img alt="vercel" title="vercel" src="https://img.shields.io/static/v1?label=styled%20components&message=Library&color=000000&labelColor=000000&style=social&logo=styled-components&logoColor=DB7093" />
 </a>
 
 <br/>
@@ -31,8 +39,6 @@ Projeto desenvolvido durante a Imersão React da <a href="(https://www.alura.com
 
 </br>
 
----
-
 ### Projeto proposto
 
 <img src="./.github/aluraquiz-figma.png" />
@@ -42,7 +48,7 @@ Clique na imagem para visualizar a prototipagem do projeto no figma
 
 <br/>
 
-### Projeto realizado/desenvolvido
+### Projeto realizado / desenvolvido
 <img src="./.github/aluraquiz-copadomundo.png" />
 <h5 align="center">
 Clique na imagem para visualizar o projeto
