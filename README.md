@@ -1,15 +1,15 @@
 
 <h2><b>📃 Descrição:</b></h2>
-<h3 align="justify">
+<h4 align="justify">
 Projeto desenvolvido durante a Imersão React da <a href="https://www.alura.com.br">Alura</a>, com o intuito de desenvolver uma aplicação do zero utilizando tecnologias como React, NextJS e Vercel. No qual foi proposto a criação de uma jogo de quizzes referente a um tema / assunto de escolha do desenvolvedor.
-</h3>
+</h4>
 
 
 <br/>
 <h2><b>🔖 Tema escolhido:</b></h2>
-<h3 align="justify">
+<h4 align="justify">
 O tema escolhido para o meu projeto foi sobre as <i><u>Copas do Mundo</u></i>, onde o jogadores irá testar o seu conhecimento sobre alguns acontecimento que ocorrem durante as edições da competição já realizadas, como: recordes, lances marcantes, acontecimentos, historia ...
-</h3>
+</h4>
 
 <br/>
 <h2 align="left"><b>🛸 Tecnologias:</b></h2>
