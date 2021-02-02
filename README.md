@@ -1,11 +1,9 @@
 
 <h2><b>📃 Descrição:</b></h2>
-<br/>
 <h3 align="justify">
 Projeto desenvolvido durante a Imersão React da <a href="https://www.alura.com.br">Alura</a>, com o intuito de desenvolver uma aplicação do zero utilizando tecnologias como React, NextJS e Vercel. No qual foi proposto a criação de uma jogo de quizzes referente a um tema / assunto de escolha do desenvolvedor.
 </h3>
 
----
 
 <br/>
 <h2><b>🔖 Tema escolhido:</b></h2>
